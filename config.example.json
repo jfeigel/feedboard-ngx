@@ -1,0 +1,62 @@
+{
+	"site":{
+		"port": 5001,
+		"name": "FeedBoard",
+		"secret": "feedboard-is-billboards-for-feeds",
+		"rss": [
+			{
+				"provider": "Engadget",
+				"url": "https://www.engadget.com/rss.xml"
+			}
+		],
+		"rss_options": {
+			"interval": 10
+		},
+		"plugins": [
+			"feedboard",
+			"github",
+			"pivotal",
+			"slack",
+			"taiga"
+		],
+		"plugin_options": {
+			"github": {
+				"ignoredRepos": [
+					"ANY PREFIX OR REPO NAME"
+				]
+			},
+			"taiga": {
+				"allowedTypes": [
+					"issue",
+					"task",
+					"userstory"
+				]
+			}
+		},
+		"analytics": "UA-00000000-0",
+		"db": {
+			"host": "localhost",
+			"port": 28015,
+			"authKey": "",
+			"db": "feedboard"
+		},
+		"options": {
+			"results_on_bootstrap": 25,
+			"time_to_wait_before_restart": 5
+		}
+	},
+	"deploy":{
+		"username": "YOUR USERNAME",
+		"hostname": "YOUR HOSTNAME",
+		"path": "~/FeedBoard",
+		"screen": "feedboard"
+	},
+	"env":{
+		"local":{
+			"views_dir": "views"
+			},
+		"production":{
+			"views_dir": "build"
+		}
+	}
+}

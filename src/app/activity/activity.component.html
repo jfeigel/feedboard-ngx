@@ -1,0 +1,11 @@
+<md-card *ngFor="let activity of activities">
+  <md-card-header>
+    <div md-card-avatar><md-icon>account_balance</md-icon></div>
+    <md-card-title>{{activity.title}}</md-card-title>
+    <md-card-subtitle>{{formatTime(activity.timestamp)}}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <img [src]="activity.avatar" />
+    <p>{{activity.content}}</p>
+  </md-card-content>
+</md-card>

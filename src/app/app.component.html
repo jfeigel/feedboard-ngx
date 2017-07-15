@@ -1,0 +1,19 @@
+<md-sidenav-container fxLayout="row" fxFlex="1 1 auto">
+  <md-sidenav #sidenav mode="side" opened="true" align="end">
+    <md-toolbar>
+      <span style="flex: 1 1 auto"></span>
+      <md-select placeholder="Filter by Feed">
+      <md-option *ngFor="let feed of filters.rss" [value]="feed">{{feed}}</md-option>
+      </md-select>
+    </md-toolbar>
+    <feed-rss fxLayout="column"></feed-rss>
+  </md-sidenav>
+  <md-toolbar>
+    <span>{{currentTime}}</span>
+    <span style="flex: 1 1 auto"></span>
+    <md-select placeholder="Filter by Plugin">
+    <md-option *ngFor="let plugin of filters.activity" [value]="plugin">{{plugin}}</md-option>
+    </md-select>
+  </md-toolbar>
+  <feed-activity fxLayout="column" [activities]="filteredData.activity"></feed-activity>
+</md-sidenav-container>

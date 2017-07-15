@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+
+$feedboard-primary: mat-palette($mat-cyan);
+$feedboard-accent:  mat-palette($mat-orange, A200, A100, A400);
+$feedboard-warn:    mat-palette($mat-red);
+
+$feedboard-theme: mat-light-theme($feedboard-primary, $feedboard-accent, $feedboard-warn);

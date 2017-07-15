@@ -1,0 +1,6 @@
+@import '~@angular/material/theming';
+@include mat-core();
+@import 'styles/theme';
+@include angular-material-theme($feedboard-theme);
+
+@import 'styles/global';
