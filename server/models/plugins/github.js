@@ -2,7 +2,7 @@
 
 const plugin_options = require('../../../config.json').site.plugin_options.github;
 
-module.exports.process = async function process(header, data) {
+module.exports.process = (header, data) => {
   // TODO: check for user agency (hookshot)
   // TODO: check for hash correctness
   // assume all checks have passed here
