@@ -2,37 +2,37 @@ import { NgModule } from '@angular/core';
 
 // Import Angular Material modules
 import {
-  MdButtonModule,
-  MdCardModule,
-  MdDialogModule,
-  MdIconModule,
-  MdInputModule,
-  MdSelectModule,
-  MdSidenavModule,
-  MdToolbarModule
+  MatButtonModule,
+  MatCardModule,
+  MatDialogModule,
+  MatIconModule,
+  MatInputModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatToolbarModule
 } from '@angular/material';
 
 // Add imported Angular Material modules to both imports and exports arrays
 @NgModule({
   imports: [
-    MdButtonModule,
-    MdCardModule,
-    MdDialogModule,
-    MdIconModule,
-    MdInputModule,
-    MdSelectModule,
-    MdSidenavModule,
-    MdToolbarModule
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   exports: [
-    MdButtonModule,
-    MdCardModule,
-    MdDialogModule,
-    MdIconModule,
-    MdInputModule,
-    MdSelectModule,
-    MdSidenavModule,
-    MdToolbarModule
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatToolbarModule
   ]
 })
 export class MdModule { }

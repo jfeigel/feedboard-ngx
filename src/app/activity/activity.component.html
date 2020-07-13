@@ -1,21 +1,23 @@
-<md-toolbar>
+<mat-toolbar>
   <span>{{currentTime}}</span>
   <span style="flex: 1 1 auto"></span>
-  <md-select placeholder="Filter by Plugin" [(ngModel)]="currentPlugin" (change)="doFilter()">
-    <md-option value="all">All Plugins</md-option>
-    <md-option *ngFor="let plugin of filters" [value]="plugin">{{plugin}}</md-option>
-  </md-select>
-</md-toolbar>
+  <mat-form-field>
+    <mat-select placeholder="Filter by Plugin" [(ngModel)]="currentPlugin" (change)="doFilter()">
+      <mat-option value="all">All Plugins</mat-option>
+      <mat-option *ngFor="let plugin of filters" [value]="plugin">{{plugin}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-toolbar>
 <div class="content-container">
-  <md-card *ngFor="let activity of filteredData" class="activity">
-    <md-card-header>
-      <div md-card-avatar><md-icon>account_balance</md-icon></div>
-      <md-card-title>{{activity.title}}</md-card-title>
-      <md-card-subtitle>{{formatTime(activity.timestamp)}}</md-card-subtitle>
-    </md-card-header>
-    <md-card-content>
+  <mat-card *ngFor="let activity of filteredData" class="activity">
+    <mat-card-header>
+      <div mat-card-avatar><mat-icon>account_balance</mat-icon></div>
+      <mat-card-title>{{activity.title}}</mat-card-title>
+      <mat-card-subtitle>{{formatTime(activity.timestamp)}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
       <img [src]="activity.avatar" />
       <p>{{activity.content}}</p>
-    </md-card-content>
-  </md-card>
+    </mat-card-content>
+  </mat-card>
 </div>

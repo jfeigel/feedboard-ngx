@@ -19,6 +19,8 @@ io.attach(app);
 
 exports.app = app;
 
+const rss = require('./controllers/rss');
+
 // For all socket connections
 require('./controllers/sockets');
 
@@ -49,6 +51,8 @@ require('./routes');
 
 console.log(`${config.site.name} is now listening on port ${config.site.port}`);
 app.listen(config.site.port);
+
+rss.init();
 
 process.on('SIGINT', () => {
   process.exit();
